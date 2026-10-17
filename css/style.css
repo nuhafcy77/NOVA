@@ -1,0 +1,127 @@
+/* NOVA Studio — colors and layout matched to the original site */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Arial,sans-serif;color:#172033;background:#fff;line-height:1.6;overflow-x:hidden}
+img{width:100%;display:block}
+a{text-decoration:none;color:inherit}
+:focus-visible{outline:3px solid #5b4df5;outline-offset:3px}
+
+.container{width:90%;max-width:1150px;margin:auto}
+.section{padding:100px 0}
+.alt{background:#f6f7fb}
+
+/* Header */
+.header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eee}
+.nav{height:75px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:27px;font-weight:bold}
+.logo span,.footer span{color:#5b4df5}
+.menu{display:flex;gap:30px}
+.menu a{font-size:15px;font-weight:500;transition:color .2s}
+.menu a:hover,.menu a.active{color:#5b4df5}
+.burger{display:none;background:none;border:none;font-size:28px;cursor:pointer;color:#172033}
+
+/* Labels and headings */
+.eyebrow{font-size:12px;font-weight:bold;letter-spacing:2px;color:#5b4df5;margin-bottom:15px}
+h2{font-size:40px;line-height:1.2;margin-bottom:20px}
+h3{font-size:21px;margin-bottom:12px}
+p{color:#667085}
+
+/* Hero */
+.hero{padding:100px 0;background:#f6f7fb}
+.hero-grid{display:flex;align-items:center;justify-content:space-between;gap:70px}
+.hero-text{flex:1}
+.hero h1{font-size:58px;line-height:1.08;margin-bottom:25px;color:#172033}
+.hero h1 span{display:block;color:#5b4df5}
+.lead{max-width:550px;margin-bottom:30px}
+.btns{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 25px;background:#172033;color:#fff;border-radius:5px;border:1px solid #172033;transition:opacity .2s}
+.btn:hover{opacity:.85}
+.btn-ghost{background:transparent;color:#172033}
+.hero-img{width:420px;height:460px;flex-shrink:0;border-radius:12px;overflow:hidden;background:#e6e4ff}
+.hero-img img{height:100%;object-fit:cover}
+
+/* About */
+.about-grid{display:flex;align-items:center;gap:80px}
+.about-img{width:450px;flex-shrink:0;border-radius:12px;overflow:hidden;background:#e6e4ff;min-height:380px}
+.about-img img{height:380px;object-fit:cover}
+.about-grid>div:last-child{flex:1}
+.about-grid p{margin-bottom:15px}
+.about .btn,.link-text{margin-top:10px}
+.about .btn{background:none;border:none;padding:0;color:#5b4df5;font-weight:bold}
+.about .btn:hover{text-decoration:underline;opacity:1}
+
+/* Services */
+.section-head{margin-bottom:45px}
+.section-head p:last-child{max-width:550px}
+.cards{display:flex;gap:20px;flex-wrap:wrap}
+.card{flex:1;min-width:220px;padding:30px;background:#fff;border:1px solid #eee;border-radius:10px}
+.num{display:block;color:#5b4df5;font-size:13px;font-weight:bold;margin-bottom:25px}
+
+/* Projects */
+.projects{display:flex;gap:25px}
+.project{flex:1;border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fff}
+.thumb{height:220px;overflow:hidden;background:#e6e4ff}
+.thumb img{height:220px;object-fit:cover}
+.project .body{padding:25px}
+.tag{display:block;font-size:11px;letter-spacing:1.5px;color:#5b4df5;font-weight:bold;margin-bottom:8px}
+.project h3{font-size:22px;margin-bottom:10px}
+.link{display:inline-block;margin-top:12px;color:#5b4df5;font-weight:bold}
+.link:hover{text-decoration:underline}
+
+/* Why NOVA (dark) */
+.why{background:#172033;color:#fff}
+.why .eyebrow{color:#9b94ff}
+.why h2,.why h3{color:#fff}
+.why .cards{gap:50px;flex-wrap:nowrap}
+.why .card{background:none;border:none;padding:0;min-width:0}
+.why .card p{color:#b8bfce}
+
+/* Contact */
+.contact{background:#f6f7fb}
+.contact-box{display:flex;justify-content:space-between;align-items:center;gap:60px}
+.contact-box h2{max-width:550px}
+.contact-info{display:flex;flex-direction:column;gap:12px}
+.contact-info a{font-weight:bold}
+.contact-info a:hover{color:#5b4df5}
+
+/* Footer */
+.footer{padding:30px 0;background:#111827;color:#fff}
+.foot{display:flex;justify-content:space-between;align-items:center}
+.footer strong{font-size:20px}
+.footer p{font-size:13px;color:#9ca3af;margin:0}
+
+/* Scroll reveal (kept subtle) */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Tablet */
+@media (max-width:1000px){
+  .hero-img{width:340px;height:400px}
+  .about-img{width:360px}
+  .about-grid{gap:50px}
+}
+
+/* Mobile */
+@media (max-width:800px){
+  .section{padding:70px 0}
+  .menu{display:none;position:absolute;top:75px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid #eee}
+  .menu.open{display:flex}
+  .menu a{padding:16px 5%;border-top:1px solid #eee}
+  .burger{display:block}
+  .hero{padding:70px 0}
+  .hero-grid{flex-direction:column-reverse;text-align:center;gap:40px}
+  .hero h1{font-size:43px}
+  .lead{margin-left:auto;margin-right:auto}
+  .btns{justify-content:center}
+  .hero-img{width:300px;max-width:100%;height:350px}
+  .about-grid{flex-direction:column;gap:40px}
+  .about-img{width:100%;min-height:300px}
+  .about-img img{height:300px}
+  .about-grid>div:last-child{text-align:center}
+  h2{font-size:32px}
+  .cards,.projects{flex-direction:column}
+  .why .cards{flex-direction:column;gap:30px}
+  .contact-box{flex-direction:column;align-items:flex-start;gap:30px}
+  .foot{flex-direction:column;gap:10px;align-items:flex-start}
+}
